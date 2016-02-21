@@ -9,6 +9,7 @@ ln -s ../typo3_src typo3_src
 ln -s typo3_src/typo3 typo3
 ln -s typo3_src/index.php index.php
 touch FIRST_INSTALL
+cp typo3_src/_.htaccess .htaccess
 chown -R www-data.www-data ../html
 
 
