@@ -24,14 +24,10 @@ RUN apt-get update && apt-get install -y ca-certificates \
 #    && pecl install xdebug \
     && rm -r /var/lib/apt/lists/*
 
-#RUN adduser www                            
 ADD apache2.conf /etc/apache2/apache2.conf 
 RUN a2enmod rewrite                        
 RUN a2enmod ssl                            
 ADD php.ini /usr/local/etc/php/php.ini     
-#ADD run.sh /usr/local/bin/run.sh           
-#ADD ssl /etc/httpd/ssl                     
-#RUN chmod +x /usr/local/bin/run.sh         
 ADD typo3setup.sh /var/www
 RUN chmod +x /var/www/typo3setup.sh
 RUN /var/www/typo3setup.sh
