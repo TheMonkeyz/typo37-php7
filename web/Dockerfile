@@ -31,9 +31,9 @@ ADD php.ini /usr/local/etc/php/php.ini
 ADD typo3setup.sh /var/www
 RUN chmod +x /var/www/typo3setup.sh
 RUN /var/www/typo3setup.sh
-ADD dbsetup.sh /var/www/dbsetup.sh
+ADD dbsetup.sh /var/www
 RUN chmod +x /var/www/dbsetup.sh
-ADD run.sh /var/www/run.sh
+ADD run.sh /var/www
 RUN chmod +x /var/www/run.sh
 
 EXPOSE 80                                  
