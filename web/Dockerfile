@@ -39,4 +39,4 @@ RUN chmod +x /var/www/run.sh
 EXPOSE 80                                  
 EXPOSE 443                                 
 
-CMD [/var/www/run.sh]
+CMD ["/var/www/run.sh"]
