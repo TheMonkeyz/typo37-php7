@@ -14,9 +14,4 @@ then
   
   #Stop Apache
   apache2ctl stop
-  
-  # We have to wait a few seconds to let Apache close its log file
-  # or else the daemon won't start.  There must be a better way
-  # than this to do that.
-  sleep 5
 fi
